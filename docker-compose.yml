@@ -4,12 +4,12 @@ services:
   api:
     image: chaikinnpong/trial:csilms-sprboot
     ports:
-      - "80:80"
+      - "8900:80"
     network_mode: 'host'
 
   frontend:
     image: chaikinnpong/trial:csilms-ngix
     ports:
-      - "3000:3000"
+      - "8901:3000"
     depends_on:
       - api
